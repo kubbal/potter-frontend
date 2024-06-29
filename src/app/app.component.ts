@@ -18,9 +18,13 @@ export class AppComponent implements OnInit {
     constructor(private potterService: PotterService) {}
 
     ngOnInit(): void {
-      this.potterService.getEnglishBooks().subscribe({
-        next: books => this.booksSig.set(books),
-        error: e => console.error(e)
-      });
+      this.fetchData();
+    }
+
+    fetchData() {
+        this.potterService.getEnglishBooks().subscribe({
+            next: books => this.booksSig.set(books),
+            error: e => console.error(e)
+          });
     }
 }

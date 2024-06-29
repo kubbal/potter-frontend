@@ -1,4 +1,4 @@
-import { Component, Input, Signal, WritableSignal, computed, signal } from '@angular/core';
+import { Component, EventEmitter, Input, Output, Signal, WritableSignal, computed, signal } from '@angular/core';
 import { Book } from '../../model/book.model';
 
 @Component({
@@ -9,6 +9,12 @@ import { Book } from '../../model/book.model';
   styleUrl: './book-list.component.sass'
 })
 export class BookListComponent {
+
+    @Output() fetchDataEmitter: EventEmitter<never> = new EventEmitter<never>();
+
+    emitFetchData() {
+      this.fetchDataEmitter.emit();
+    }
 
     @Input({required: true}) booksSig!: WritableSignal<Book[]>;
     booksCount: Signal<number> = computed(() => this.booksSig().length);

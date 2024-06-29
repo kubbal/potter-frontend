@@ -1,5 +1,6 @@
 @defer {
     <h2>Count after user changes: {{ booksCount() }}</h2>
+    <button type="button" (click)="emitFetchData()">Refresh table</button>
     <table>
         <thead>
             <tr>
