@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { BookListComponent } from './component/book-list/book-list.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.sass'
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.sass',
+    imports: [RouterOutlet, BookListComponent]
 })
-export class AppComponent {
-  title = 'potter-frontend';
-}
+export class AppComponent {}

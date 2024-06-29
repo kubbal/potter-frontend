@@ -1,0 +1,25 @@
+@defer {
+    <h2>Count after user changes: {{ booksCount() }}</h2>
+    <table>
+        <thead>
+            <tr>
+                <td>Title</td>
+                <td>Number</td>
+                <td>Release date</td>
+            </tr>
+        </thead>
+        <tbody>
+            @for(book of booksSig(); track book.index) {
+                <tr>
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.number }}</td>
+                    <td>{{ book.releaseDate }}</td>
+                    <td><button (click)="deleteBook(book.index)">Delete</button></td>
+                 </tr>
+            }
+        </tbody>
+    </table>
+} @loading (minimum 0.5s) {
+    Loading content...
+}
+
