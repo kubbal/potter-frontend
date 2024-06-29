@@ -1,10 +1,11 @@
-import { Component, EventEmitter, Input, Output, Signal, WritableSignal, computed, signal } from '@angular/core';
+import { Component, EventEmitter, Input, Output, Signal, WritableSignal, computed } from '@angular/core';
 import { Book } from '../../model/book.model';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-book-list',
   standalone: true,
-  imports: [],
+  imports: [DatePipe],
   templateUrl: './book-list.component.html',
   styleUrl: './book-list.component.sass'
 })

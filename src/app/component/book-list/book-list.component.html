@@ -14,7 +14,7 @@
                 <tr>
                     <td>{{ book.title }}</td>
                     <td>{{ book.number }}</td>
-                    <td>{{ book.releaseDate }}</td>
+                    <td>{{ book.releaseDate | date:'mediumDate' }}</td>
                     <td><button (click)="deleteBook(book.index)">Delete</button></td>
                  </tr>
             }
