@@ -1,4 +1,7 @@
-# PotterFrontend
+# Potter Frontend
+
+Uses potterapi
+https://github.com/fedeperin/potterapi/tree/main
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
 
