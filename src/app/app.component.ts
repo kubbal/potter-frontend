@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
 
     fetchData() {
         this.potterService.getEnglishBooks().subscribe({
-            next: books => this.booksSig.set(books),
+            next: (books: Book[]) => this.booksSig.set(books),
             error: e => console.error(e)
           });
     }
